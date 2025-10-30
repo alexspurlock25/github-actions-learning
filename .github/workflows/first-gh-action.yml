@@ -14,7 +14,7 @@ jobs:
           cd build
           cmake ..
           cmake --build .
-          \Debug\GitHubActions.exe
+          ./Debug/GitHubActions.exe
   build-linux-clang:
     runs-on: ubuntu-latest
     steps:
