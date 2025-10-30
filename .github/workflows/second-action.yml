@@ -1,0 +1,15 @@
+name: second-github-action
+run-name: A second action
+
+on: [push]
+
+jobs:
+  print-hello-world-using-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python_version: "3.12"
+      - name: Print Hello, World!
+        run: python -c 'print("Hello, World")'
