@@ -4,6 +4,17 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 
 jobs:
+  build-windows-ci:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: PrintHelloWorld
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          cmake --build .
+          ./GitHubActions.exe
   build-linux-clang:
     runs-on: ubuntu-latest
     steps:
