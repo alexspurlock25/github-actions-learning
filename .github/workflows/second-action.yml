@@ -10,6 +10,6 @@ jobs:
       - name: Install Python
         uses: actions/setup-python@v5
         with:
-          python_version: "3.12"
+          python-version: "3.12"
       - name: Print Hello, World!
         run: python -c 'print("Hello, World")'
