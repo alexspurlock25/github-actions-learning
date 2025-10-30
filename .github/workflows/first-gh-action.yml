@@ -8,8 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: mkdir build
-      - run: cd build
-      - run: cmake ..
-      - run: cmake --build .
-      - run: ./GitHubActions
+      - run: |
+          mkdir build
+          cd build
+          cmake ..
+          cmake --build .
+          ./GitHubActions
