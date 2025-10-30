@@ -4,7 +4,12 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 
 jobs:
-  run-maincpp:
+  build-linux-clang:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: mkdir build
+      - run: cd build
+      - run: cmake ..
+      - run: cmake --build .
+      - run: ./GitHubActions
